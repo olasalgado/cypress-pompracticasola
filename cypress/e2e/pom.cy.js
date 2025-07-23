@@ -31,18 +31,13 @@ describe('ToDoMVC - Tests básicos con POM', () => {
 
 
 })
- 
-
-it('editar tarea', () => {
-
-  todo.editartarea(0, 'nuevo texto')
-
-  })
 
   
-it('borrar tareas completadas', () => {
+  it('borrar tareas completadas', () => {
 
-  todo.borrartareascompletadas(0, 'pasear al perro')
+    todo.añadirtareanueva('pasear al perro');
+    todo.completartarea(0);
+    todo.borrartareascompletadas();
 
-})
+  })
 })
